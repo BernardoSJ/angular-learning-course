@@ -1,1 +1,13 @@
-<button (click)="onClick()">Push</button>
+<button (click)="onClick($event)">Push</button>
+
+<select (change)="onChange($event)">
+    <option value="one">One</option>
+    <option value="two">Two</option>
+    <option value="three">Three</option>
+</select>
+
+<div class="square" (mouseenter)="onMouseenter()" (mouseout)="onMouseout()">
+    {{message}}
+</div>
+
+<input type="text" (change)="onChangeInput($event)" (input)="onInput($event)" (focus)="onfocus()" (blur)="onblur()">

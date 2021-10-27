@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-first-app';
+  
+  titles:string[];
+
+  person:any;
+
+  text:string;
+  constructor(){
+    this.titles=["zelda","mario bros"];
+    this.text="Value"
+
+    this.person={}
+  }
+
+  onalert(){
+    alert("pulso");
+  }
 }

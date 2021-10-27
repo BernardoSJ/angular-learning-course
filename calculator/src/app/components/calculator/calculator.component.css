@@ -1,0 +1,45 @@
+.calculator{
+    width: 200px;
+    border: 1px solid gray;
+    background-color: lightgray;
+    padding: 5px;
+}
+
+p.result{
+    background-color: white;
+    color:black;
+    height: 20px;
+    text-align: center;
+    line-height: 100%;
+    padding-top: 5px;
+}
+
+.numbers.buttons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.numbers.buttons button{
+    width: 33.33%;
+    height: 30px;
+}
+
+.numbers.buttons button:last-child{
+    width: 100%;
+}
+
+.operations.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.operations.buttons button{
+    width:25%;
+    height: 30px;
+}
+
+.operations.buttons button:last-child{
+    width: 100%;
+}
