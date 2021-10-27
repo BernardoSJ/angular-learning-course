@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Last name</th>
+    <th>age</th>
+    <th>active</th>
+  </tr>
+
+  <tr *ngFor="let people of arrayPeople">
+    <td>{{people.name}}</td>
+    <td>{{people.lastname}}</td>
+    <td>{{people.age}}</td>
+    <td>{{people.active}}</td>
+  </tr>
+</table>
+<router-outlet></router-outlet>
