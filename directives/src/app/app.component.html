@@ -1,0 +1,51 @@
+<h1>NgStyle directive</h1>
+<p [ngStyle]="properties">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ducimus repellendus sit totam nostrum. Harum, numquam. Sed harum odio doloremque praesentium voluptatibus eum quas exercitationem dignissimos, commodi possimus temporibus unde.
+</p>
+
+<div>
+  <button (click)="changeColor('g')">Green</button>
+  <button (click)="changeColor('r')">Red</button>
+  <button (click)="changeColor('y')">Yellow</button>
+</div>
+
+<div>
+  <input type="text" [(ngModel)]="properties.color">
+</div>
+
+<div>
+  <input type="range" min="12" max="200" step="2" (change)="onChange($event)">
+</div>
+
+<h1>NgClass directive</h1>
+<div [ngClass]="{light:true,red:false}">
+
+</div>
+
+<h1>NgIf directive</h1>
+<p *ngIf="show; then mainBlock else elseBlock">Paragraph</p>
+<ng-template #mainBlock>
+  <p>first Paragraph</p>
+</ng-template>
+<ng-template #elseBlock>
+  <p>Second Paragraph</p>
+</ng-template>
+<button (click)="onClick()">Show/hide</button>
+
+<h1>NgFor directive</h1>
+<ul *ngFor="let person of people">
+  <li>
+    {{person.name}} {{person.lastname}} -- {{person.age}}
+  </li>
+</ul>
+
+<h1>NgSwitch directive</h1>
+<div [ngSwitch]="optionNumber">
+  <p *ngSwitchCase='1'>Option 1</p>
+  <p *ngSwitchCase='2'>Option 2</p>
+  <p *ngSwitchCase='3'>Option 3</p>
+  <p *ngSwitchDefault>None</p>
+</div>
+
+<h1>Personal directive</h1>
+<p appUnderline>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique atque, natus ad voluptas vero dolores reiciendis architecto, nostrum, laboriosam quis commodi quisquam velit incidunt necessitatibus! Quasi numquam doloremque amet quia!</p>
