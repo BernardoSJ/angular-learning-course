@@ -1,0 +1,46 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" formControlName="name">
+        <div>
+            <p>Valid: {{form.controls.nombre.valid}}</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" class="form-control" formControlName="lastname">
+    </div>
+
+    <div class="form-group">
+        <label>Age</label>
+        <input type="text" class="form-control" formControlName="age">
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" formControlName="email">
+    </div>
+
+    <div class="form-group">
+        <label>Id</label>
+        <input type="text" class="form-control" formControlName="id">
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" formControlName="password">
+    </div>
+
+    <div class="form-group">
+        <label>Repeat Password</label>
+        <input type="password" class="form-control" formControlName="repeatPassword">
+    </div>
+
+    <input type="submit" value="Send" class="btn btn-block btn-success" [disabled]="!form.valid">
+</form>
+{{form.value | json}}
+<div>
+    <p>Valido: {{form.valid}}</p>
+</div>
+
